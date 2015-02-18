@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  payment_order_id: 1
+  payment_date: 2015-02-18 21:11:03
+  amount: 9.99
+  status: MyString
+  reference: MyString
+  uuid: MyString
+
+two:
+  payment_order_id: 1
+  payment_date: 2015-02-18 21:11:03
+  amount: 9.99
+  status: MyString
+  reference: MyString
+  uuid: MyString

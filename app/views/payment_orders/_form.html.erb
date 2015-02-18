@@ -1,0 +1,41 @@
+<%= form_for(@payment_order) do |f| %>
+  <% if @payment_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payment_order.errors.count, "error") %> prohibited this payment_order from being saved:</h2>
+
+      <ul>
+      <% @payment_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :contract_id %><br>
+    <%= f.number_field :contract_id %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_date %><br>
+    <%= f.date_select :payment_date %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_planned %><br>
+    <%= f.date_select :payment_planned %>
+  </div>
+  <div class="field">
+    <%= f.label :receipt %><br>
+    <%= f.text_field :receipt %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

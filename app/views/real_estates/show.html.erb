@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Real estate owner:</strong>
+  <%= @real_estate.real_estate_owner_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @real_estate.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @real_estate.status %>
+</p>
+
+<p>
+  <strong>Predial:</strong>
+  <%= @real_estate.predial %>
+</p>
+
+<p>
+  <strong>Property type:</strong>
+  <%= @real_estate.property_type %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @real_estate.rooms %>
+</p>
+
+<p>
+  <strong>Bathrooms:</strong>
+  <%= @real_estate.bathrooms %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @real_estate.area %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @real_estate.description %>
+</p>
+
+<p>
+  <strong>Build date:</strong>
+  <%= @real_estate.build_date %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @real_estate.location %>
+</p>
+
+<%= link_to 'Edit', edit_real_estate_path(@real_estate) %> |
+<%= link_to 'Back', real_estates_path %>

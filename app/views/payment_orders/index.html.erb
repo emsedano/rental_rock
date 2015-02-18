@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Payment Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contract</th>
+      <th>Payment date</th>
+      <th>Payment planned</th>
+      <th>Receipt</th>
+      <th>Status</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payment_orders.each do |payment_order| %>
+      <tr>
+        <td><%= payment_order.contract_id %></td>
+        <td><%= payment_order.payment_date %></td>
+        <td><%= payment_order.payment_planned %></td>
+        <td><%= payment_order.receipt %></td>
+        <td><%= payment_order.status %></td>
+        <td><%= payment_order.amount %></td>
+        <td><%= link_to 'Show', payment_order %></td>
+        <td><%= link_to 'Edit', edit_payment_order_path(payment_order) %></td>
+        <td><%= link_to 'Destroy', payment_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Payment order', new_payment_order_path %>

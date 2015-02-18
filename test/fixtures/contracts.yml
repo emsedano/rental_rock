@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  real_estate_id: 1
+  renter_id: 1
+  payment_period: MyString
+  amount: 9.99
+  start_date: 2015-02-18
+  ending_date: 2015-02-18
+  first_payment_date: 2015-02-18
+  deposit: 9.99
+
+two:
+  real_estate_id: 1
+  renter_id: 1
+  payment_period: MyString
+  amount: 9.99
+  start_date: 2015-02-18
+  ending_date: 2015-02-18
+  first_payment_date: 2015-02-18
+  deposit: 9.99

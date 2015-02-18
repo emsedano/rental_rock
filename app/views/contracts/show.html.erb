@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Real estate:</strong>
+  <%= @contract.real_estate_id %>
+</p>
+
+<p>
+  <strong>Renter:</strong>
+  <%= @contract.renter_id %>
+</p>
+
+<p>
+  <strong>Payment period:</strong>
+  <%= @contract.payment_period %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @contract.amount %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @contract.start_date %>
+</p>
+
+<p>
+  <strong>Ending date:</strong>
+  <%= @contract.ending_date %>
+</p>
+
+<p>
+  <strong>First payment date:</strong>
+  <%= @contract.first_payment_date %>
+</p>
+
+<p>
+  <strong>Deposit:</strong>
+  <%= @contract.deposit %>
+</p>
+
+<%= link_to 'Edit', edit_contract_path(@contract) %> |
+<%= link_to 'Back', contracts_path %>

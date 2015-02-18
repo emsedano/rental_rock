@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contract_id: 1
+  payment_date: 2015-02-18
+  payment_planned: 2015-02-18
+  receipt: 
+  status: MyString
+  amount: 9.99
+
+two:
+  contract_id: 1
+  payment_date: 2015-02-18
+  payment_planned: 2015-02-18
+  receipt: 
+  status: MyString
+  amount: 9.99

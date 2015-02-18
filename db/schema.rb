@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218203838) do
+ActiveRecord::Schema.define(version: 20150218211103) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "username",        limit: 255
@@ -58,6 +58,19 @@ ActiveRecord::Schema.define(version: 20150218203838) do
     t.integer  "user_id",       limit: 4
   end
 
+  create_table "contracts", force: :cascade do |t|
+    t.integer  "real_estate_id",     limit: 4
+    t.integer  "renter_id",          limit: 4
+    t.string   "payment_period",     limit: 255
+    t.decimal  "amount",                         precision: 8, scale: 2
+    t.date     "start_date"
+    t.date     "ending_date"
+    t.date     "first_payment_date"
+    t.decimal  "deposit",                        precision: 8, scale: 2
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
+  end
+
   create_table "counties", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.integer  "country_id", limit: 4
@@ -89,6 +102,27 @@ ActiveRecord::Schema.define(version: 20150218203838) do
     t.datetime "updated_at",                null: false
   end
 
+  create_table "payment_orders", force: :cascade do |t|
+    t.integer  "contract_id",     limit: 4
+    t.date     "payment_date"
+    t.date     "payment_planned"
+    t.string   "status",          limit: 255
+    t.decimal  "amount",                      precision: 8, scale: 2
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer  "payment_order_id", limit: 4
+    t.datetime "payment_date"
+    t.decimal  "amount",                       precision: 8, scale: 2
+    t.string   "status",           limit: 255
+    t.string   "reference",        limit: 255
+    t.string   "uuid",             limit: 255
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
+  end
+
   create_table "plans", force: :cascade do |t|
     t.string   "name",        limit: 255
     t.text     "description", limit: 65535
@@ -110,6 +144,36 @@ ActiveRecord::Schema.define(version: 20150218203838) do
     t.string   "notes",          limit: 255
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "real_estates", force: :cascade do |t|
+    t.integer  "real_estate_owner_id", limit: 4
+    t.string   "name",                 limit: 255
+    t.string   "status",               limit: 255
+    t.decimal  "predial",                            precision: 8, scale: 2
+    t.string   "property_type",        limit: 255
+    t.integer  "rooms",                limit: 4
+    t.integer  "bathrooms",            limit: 4
+    t.float    "area",                 limit: 24
+    t.text     "description",          limit: 65535
+    t.date     "build_date"
+    t.string   "location",             limit: 255
+    t.datetime "created_at",                                                 null: false
+    t.datetime "updated_at",                                                 null: false
+  end
+
+  create_table "renters", force: :cascade do |t|
+    t.string   "firstname",       limit: 255
+    t.string   "lastname",        limit: 255
+    t.string   "second_lastname", limit: 255
+    t.string   "genre",           limit: 255
+    t.string   "email",           limit: 255
+    t.string   "phone",           limit: 255
+    t.string   "mobile",          limit: 255
+    t.date     "born"
+    t.boolean  "require_invoice", limit: 1
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "states", force: :cascade do |t|

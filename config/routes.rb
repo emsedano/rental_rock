@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   
+  resources :payments
+
+  resources :payment_orders
+
+  resources :contracts
+
+  resources :real_estates
+
+  resources :renters
+
   resources :addresses
 
   resources :real_estate_owners
