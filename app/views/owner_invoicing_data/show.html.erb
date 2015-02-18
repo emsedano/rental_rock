@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @owner_invoicing_datum.owner_id %>
+</p>
+
+<p>
+  <strong>Fiscal person:</strong>
+  <%= @owner_invoicing_datum.fiscal_person %>
+</p>
+
+<p>
+  <strong>Rfc:</strong>
+  <%= @owner_invoicing_datum.rfc %>
+</p>
+
+<p>
+  <strong>Fiscal name:</strong>
+  <%= @owner_invoicing_datum.fiscal_name %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @owner_invoicing_datum.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @owner_invoicing_datum.address2 %>
+</p>
+
+<p>
+  <strong>Neiborghood:</strong>
+  <%= @owner_invoicing_datum.neiborghood %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @owner_invoicing_datum.county %>
+</p>
+
+<p>
+  <strong>:</strong>
+  <%= @owner_invoicing_datum. %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @owner_invoicing_datum.country_id %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @owner_invoicing_datum.zipcode %>
+</p>
+
+<%= link_to 'Edit', edit_owner_invoicing_datum_path(@owner_invoicing_datum) %> |
+<%= link_to 'Back', owner_invoicing_data_path %>

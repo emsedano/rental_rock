@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  related_subject_id: 1
+  related_subject_type: MyString
+  address1: MyString
+  address2: MyString
+  neiborghood: MyString
+  county_id: 1
+  state_id: MyString
+  country_id: 1
+  zipcode: MyString
+
+two:
+  related_subject_id: 1
+  related_subject_type: MyString
+  address1: MyString
+  address2: MyString
+  neiborghood: MyString
+  county_id: 1
+  state_id: MyString
+  country_id: 1
+  zipcode: MyString

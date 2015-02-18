@@ -1,0 +1,57 @@
+<%= form_for(@real_estate_owner) do |f| %>
+  <% if @real_estate_owner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@real_estate_owner.errors.count, "error") %> prohibited this real_estate_owner from being saved:</h2>
+
+      <ul>
+      <% @real_estate_owner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :secondlastname %><br>
+    <%= f.text_field :secondlastname %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %><br>
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :bank_account %><br>
+    <%= f.text_field :bank_account %>
+  </div>
+  <div class="field">
+    <%= f.label :clabe %><br>
+    <%= f.text_field :clabe %>
+  </div>
+  <div class="field">
+    <%= f.label :bank_name %><br>
+    <%= f.text_field :bank_name %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

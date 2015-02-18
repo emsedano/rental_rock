@@ -1,0 +1,2 @@
+module RealEstateOwnersHelper
+end

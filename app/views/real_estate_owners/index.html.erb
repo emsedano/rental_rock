@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Real Estate Owners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Secondlastname</th>
+      <th>Phone</th>
+      <th>Mobile</th>
+      <th>Email</th>
+      <th>Bank account</th>
+      <th>Clabe</th>
+      <th>Bank name</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @real_estate_owners.each do |real_estate_owner| %>
+      <tr>
+        <td><%= real_estate_owner.firstname %></td>
+        <td><%= real_estate_owner.lastname %></td>
+        <td><%= real_estate_owner.secondlastname %></td>
+        <td><%= real_estate_owner.phone %></td>
+        <td><%= real_estate_owner.mobile %></td>
+        <td><%= real_estate_owner.email %></td>
+        <td><%= real_estate_owner.bank_account %></td>
+        <td><%= real_estate_owner.clabe %></td>
+        <td><%= real_estate_owner.bank_name %></td>
+        <td><%= real_estate_owner.notes %></td>
+        <td><%= link_to 'Show', real_estate_owner %></td>
+        <td><%= link_to 'Edit', edit_real_estate_owner_path(real_estate_owner) %></td>
+        <td><%= link_to 'Destroy', real_estate_owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Real estate owner', new_real_estate_owner_path %>

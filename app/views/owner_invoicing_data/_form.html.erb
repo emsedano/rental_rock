@@ -1,0 +1,61 @@
+<%= form_for(@owner_invoicing_datum) do |f| %>
+  <% if @owner_invoicing_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@owner_invoicing_datum.errors.count, "error") %> prohibited this owner_invoicing_datum from being saved:</h2>
+
+      <ul>
+      <% @owner_invoicing_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :owner_id %><br>
+    <%= f.number_field :owner_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fiscal_person %><br>
+    <%= f.text_field :fiscal_person %>
+  </div>
+  <div class="field">
+    <%= f.label :rfc %><br>
+    <%= f.text_field :rfc %>
+  </div>
+  <div class="field">
+    <%= f.label :fiscal_name %><br>
+    <%= f.text_field :fiscal_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address1 %><br>
+    <%= f.text_field :address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address2 %><br>
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :neiborghood %><br>
+    <%= f.text_field :neiborghood %>
+  </div>
+  <div class="field">
+    <%= f.label :county %><br>
+    <%= f.text_field :county %>
+  </div>
+  <div class="field">
+    <%= f.label : %><br>
+    <%= f.text_field : %>
+  </div>
+  <div class="field">
+    <%= f.label :country_id %><br>
+    <%= f.number_field :country_id %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

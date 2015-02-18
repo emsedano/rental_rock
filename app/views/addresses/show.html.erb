@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Related subject:</strong>
+  <%= @address.related_subject_id %>
+</p>
+
+<p>
+  <strong>Related subject type:</strong>
+  <%= @address.related_subject_type %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @address.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @address.address2 %>
+</p>
+
+<p>
+  <strong>Neiborghood:</strong>
+  <%= @address.neiborghood %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @address.county_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @address.state_id %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @address.country_id %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @address.zipcode %>
+</p>
+
+<%= link_to 'Edit', edit_address_path(@address) %> |
+<%= link_to 'Back', addresses_path %>

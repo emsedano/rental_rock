@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fiscal_person: MyString
+  rfc: MyString
+  fiscal_name: MyString
+  address1: MyString
+  address2: MyString
+  neiborghood: MyString
+  county: MyString
+  : 
+  country_id: 1
+  zipcode: MyString
+
+two:
+  fiscal_person: MyString
+  rfc: MyString
+  fiscal_name: MyString
+  address1: MyString
+  address2: MyString
+  neiborghood: MyString
+  county: MyString
+  : 
+  country_id: 1
+  zipcode: MyString

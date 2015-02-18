@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
   
+  resources :addresses
+
+  resources :real_estate_owners
+
+  resources :owner_invoicing_data
+
+  resources :counties
+
+  resources :states
+
+  resources :countries
+
+  resources :billing_data
+
+  resources :accounts
+
   resources :plans
 
   get 'home/index'
